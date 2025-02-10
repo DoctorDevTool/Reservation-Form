@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DaVinci Reservation</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1 id="title"><span>"DaVinci"</span><br>Reservation Form</h1>
+        <p id="description">Please, check all the fields below</p>
+    </header>
+    <main>
+        <div class="container">
+            <form id="survey-form">
+                <!-- First fieldset -->
+                <fieldset class="survey-form__contact">
+                    <legend>Contact details</legend>
+                    <!-- name -->
+                    <div class="groups">
+                        <label id="name-label" for="name">Your name:
+                            <input class="contact-inputs" name="name" id="name" type="text" placeholder="John Doe"
+                                required />
+                        </label>
+                    </div>
+                    <!-- email -->
+                    <div class="groups">
+                        <label id="email-label" for="email">Your email:
+                            <input class="contact-inputs" name="email" id="email" type="email"
+                                placeholder="example@mail.com" required />
+                        </label>
+                    </div>
+                    <!-- guests -->
+                    <div class="groups">
+                        <label id="number-label" for="number">Number of guests:
+                            <input class="contact-inputs" name="number" id="number" type="number" min="2" max="15"
+                                placeholder="up to 15 people (min2)" required />
+                        </label>
+                    </div>
+                </fieldset>
+                <!-- Second fieldset -->
+                <fieldset class="survey-form__res-details">
+                    <legend>Reservation details</legend>
+                    <!--area-->
+                    <div class="groups">
+                        <label>Which area would you like to be seated?
+                            <select class="contact-inputs" id="dropdown" required>
+                                <option disabled selected value>Select one</option>
+                                <option value="restaurant">Restaurant</option>
+                                <option value="patio">Patio</option>
+                                <option value="launge">Launge</option>
+                            </select>
+                        </label>
+                    </div>
+                    <!-- kids area -->
+                    <div class="groups">
+                        <p>Would you like to reserve a kids area also?</p>
+                        <div class="selection-wrapper">
+                            <label class="selection-label">Yes
+                                <input class="inline" type="radio" value="1" name="kids-area" />
+                            </label>
+                            <label class="selection-label">No
+                                <input class="inline" type="radio" value="2" name="kids-area" checked />
+                            </label>
+                        </div>
+                    </div>
+                    <!-- alergies -->
+                    <div class="groups">
+                        <p>If there are any alergies, please, select:</p>
+                        <div class="selection-wrapper">
+                            <label class="selection-label">
+                                <input class="inline" name="alergies" value="eggs" type="checkbox" />Eggs
+                            </label>
+                            <label class="selection-label">
+                                <input class="inline" name="alergies" value="nuts" type="checkbox" />Nuts
+                            </label>
+                            <label class="selection-label">
+                                <input class="inline" name="alergies" value="fish" type="checkbox" />Fish
+                            </label>
+                            <label class="selection-label">
+                                <input class="inline" name="alergies" value="gluten" type="checkbox" />Gluten
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Third fieldset -->
+                <fieldset class="survey-form__textarea">
+                    <legend>Anything you would like to add?</legend>
+                    <div class="groups">
+                        <label>
+                            <textarea class="contact-inputs" id="comments" name="comments" rows="4" cols="30"
+                                placeholder="Start typing here..."></textarea>
+                        </label>
+                    </div>
+                </fieldset>
+                <!-- terms -->
+                <div class="groups">
+                    <div class="selection-wrapper">
+                        <label class="selection-label">
+                            <input class="inline" name="terms" type="checkbox" value="check" required />I accept <a
+                                href="#" target="_blank">the terms and
+                                conditions</a>
+                        </label>
+                    </div>
+                </div>
+                <!-- submit -->
+                <div class="groups">
+                    <label class="submit-label">
+                        <input name="name" id="submit" type="submit" value="Submit" />
+                    </label>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
