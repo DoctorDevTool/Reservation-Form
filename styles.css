@@ -5,6 +5,7 @@
   --color-white: #f3f3f3;
   --color-gray: #b9aeae;
   --color-yelow: #fc9d18;
+  --color-orange: #fa6502;
   --font-hero: "Oooh Baby", serif;
 }
 
@@ -54,7 +55,7 @@ header {
 
 span {
   font-family: var(--font-hero);
-  text-shadow: #fa6502 2px 3px 3px;
+  text-shadow: var(--color-orange) 2px 3px 3px;
 }
 
 h1 {
@@ -83,10 +84,6 @@ select {
 .survey-form__contact,
 .survey-form__res-details {
   text-align: left;
-}
-
-input:focus {
-  border-color: green;
 }
 
 .groups {
